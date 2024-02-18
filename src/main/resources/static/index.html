@@ -2,35 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Kinobileter</title>
-</head>
-<style>
-    label { display : table-cell ;}
-    input { display : table-cell; }
-</style>
-<body>
-<h1 class="text center"> Bestilling av kino biletter</h1>
-<form action="#">
-    <label for="films"><Select></Select> film:</label>
-    <select id="films" class="form-select" aria-label="Default select example">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ObligatoryAssigment1</title>
+    <script src="index.js"></script>
 
-        <option value="blank"></option  >
-        <option value="spiderman">spiderman1</option>
-        <option value="spiderman">spiderman2</option>
-        <option value="spiderman">spiderman3</option>
-        <option value="spiderman">spiderman4</option>
+</head>
+<body>
+<h1 class="h1 text-center">Order cinema tickets</h1>
+
+<form action="#">
+    <label for="movies">Select movie:</label>
+    <select id="movies" class="form-select" aria-label="Default select example">
+
+        <option value="blank"></option>
+
+        <option value="spiderman1">spiderman1</option>
+
+        <option value="Spiderman2">spiderman2</option>
+
+        <option value="spiderman3">spiderman3</option>
+        <option value="spiderman4">spiderman4</option>
 
     </select>
     <br>
 
 
 
+    <label for="firstname">Firstname:</label>
+    <input id="firstname" class="form-control" type="text">
+    <p id="firstnameError"></p>
+    <br>
+
+    <label for="lastname">Lastname:</label>
+    <input id="lastname" class="form-control" type="text">
+    <p id="lastnameError"></p>
+    <br>
+
+    <label for="email">Email:</label>
+    <input id="email" class="form-control" type="text">
+    <p id="emailError"></p>
+    <br>
+    <label for="phonenumber">Phonenumber:</label>
+    <input id="phonenumber" class="form-control" type="text">
+    <p id="phonenumberError"></p>
+    <br>
+
+    <label for="amount">Number of tickets:</label>
+    <input id="amount" class="form-control" type="number">
+    <p id="amountError"></p>
+    <br>
+
+    <input type="submit" class="form-control" value="Buy Tickets" onclick="buyTicket()">
 </form>
 
 
+<h2 class="h2 text-center">All tickets</h2>
+<div id="ut"></div>
+
+<button onclick="DeleteAlt()" type="button" class="btn btn-primary">Delete all tickets</button>
 </body>
-
-
-
-
 </html>
